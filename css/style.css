@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    --orange: #FF6B35;
+    --orange-light: #FF8C5A;
+    --blue: #29B6F6;
+    --yellow: #FFD600;
+    --green: #66BB6A;
+    --dark: #2D3748;
+    --gray: #718096;
+    --light-bg: #FFFBF5;
+    --white: #ffffff;
+    --shadow: 0 8px 30px rgba(255,107,53,0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--dark);
+    background: var(--light-bg);
+}
+
+/* ヘッダー */
+header {
+    background: var(--white);
+    box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--orange);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo .logo-sub {
+    font-size: 0.75rem;
+    color: var(--gray);
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0.3rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 700;
+    padding: 0.5rem 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: var(--orange);
+    color: var(--white);
+}
+
+/* ヒーローセクション */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 65px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/kids_gym.jpg');
+    background-size: cover;
+    background-position: center top;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        160deg,
+        rgba(255, 107, 53, 0.82) 0%,
+        rgba(41, 182, 246, 0.75) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: var(--white);
+    padding: 3rem 2rem;
+    max-width: 800px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--dark);
+    font-weight: 900;
+    font-size: 0.9rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+    text-shadow: 2px 4px 12px rgba(0,0,0,0.2);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    text-shadow: 1px 2px 6px rgba(0,0,0,0.15);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.btn-primary {
+    background: var(--yellow);
+    color: var(--dark);
+    box-shadow: 0 6px 20px rgba(255,214,0,0.5);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(255,214,0,0.6);
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,0.15);
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.8);
+    backdrop-filter: blur(5px);
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--orange);
+    transform: translateY(-4px);
+}
+
+.btn-orange {
+    background: var(--orange);
+    color: var(--white);
+    box-shadow: 0 6px 20px rgba(255,107,53,0.4);
+}
+
+.btn-orange:hover {
+    background: var(--orange-light);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(255,107,53,0.5);
+}
+
+/* ウェーブ区切り */
+.wave-divider {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: -2px;
+}
+
+.wave-divider svg {
+    display: block;
+    width: 100%;
+}
+
+/* セクション共通 */
+.section {
+    padding: 5rem 2rem;
+}
+
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.section-title span {
+    color: var(--orange);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gray);
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+/* 特徴カード */
+.features-section {
+    background: var(--white);
+    padding: 5rem 2rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: var(--light-bg);
+    border-radius: 24px;
+    padding: 2.5rem 1.8rem;
+    text-align: center;
+    transition: all 0.35s;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--orange), var(--yellow));
+    border-radius: 24px 24px 0 0;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--orange);
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--orange);
+    margin-bottom: 0.8rem;
+}
+
+.feature-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* CTA バナー */
+.cta-section {
+    background: linear-gradient(135deg, var(--orange) 0%, #FF8C5A 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+/* ページヘッダー */
+.page-header {
+    background: linear-gradient(135deg, var(--orange) 0%, var(--blue) 100%);
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    margin-top: 65px;
+    color: var(--white);
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* コンテンツ */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.content h2 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--orange);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 5px solid var(--yellow);
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.content p {
+    color: var(--gray);
+    margin-bottom: 1rem;
+    line-height: 1.9;
+}
+
+.highlight-box {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-left: 5px solid var(--orange);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+/* サービスカード */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.35s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--orange);
+    box-shadow: var(--shadow);
+}
+
+.service-card .service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.service-card .age-badge {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.2rem 0.8rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* フォーム */
+.contact-form {
+    max-width: 620px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    font-size: 0.95rem;
+}
+
+.form-group label .required {
+    color: var(--orange);
+    margin-left: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.85rem 1.1rem;
+    border: 2px solid #E2E8F0;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    transition: border-color 0.3s;
+    background: var(--light-bg);
+    color: var(--dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--orange);
+    background: var(--white);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* フッター */
+footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+footer .footer-logo {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--orange);
+    margin-bottom: 0.5rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 0.1rem;
+    }
+
+    .nav-links a {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .feature-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .contact-form {
+        padding: 2rem 1.5rem;
+    }
+}

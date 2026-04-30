@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+  command = ""
+
+[dev]
+  command = ""
+  port = 3000
+  targetPort = 3000
+  apiPort = 3000
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[security]
+  password = "123123"
