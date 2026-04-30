@@ -517,44 +517,177 @@ footer p {
     margin-top: 0.5rem;
 }
 
+/* ハンバーガーボタン（PCでは非表示） */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--orange);
+    padding: 0.3rem 0.5rem;
+    line-height: 1;
+}
+
 /* レスポンシブ */
 @media (max-width: 768px) {
+    /* ナビゲーション */
+    nav {
+        padding: 0.8rem 1.2rem;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
     .nav-links {
-        gap: 0.1rem;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        background: var(--white);
+        border-top: 1px solid #eee;
+        margin-top: 0.5rem;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        overflow: hidden;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
     }
 
     .nav-links a {
-        padding: 0.4rem 0.7rem;
-        font-size: 0.85rem;
+        display: block;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        background: var(--orange);
+        color: var(--white);
+    }
+
+    /* ヒーロー */
+    .hero {
+        margin-top: 0;
+        min-height: 100svh;
+    }
+
+    .hero-content {
+        padding: 2rem 1.2rem;
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-content p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
     }
 
-    .section-title {
-        font-size: 1.6rem;
-    }
-
-    .feature-grid,
-    .service-grid {
-        grid-template-columns: 1fr;
+    .hero-badge {
+        font-size: 0.8rem;
+        padding: 0.35rem 1rem;
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 0.8rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        padding: 0.85rem 1.5rem;
+    }
+
+    /* セクション */
+    .section {
+        padding: 3rem 1.2rem;
+    }
+
+    .features-section {
+        padding: 3rem 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+
+    /* カード */
+    .feature-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature-card,
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* CTA */
+    .cta-section {
+        padding: 3rem 1.2rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-section p {
+        font-size: 0.95rem;
+    }
+
+    /* ページヘッダー */
+    .page-header {
+        padding: 4rem 1.2rem 2.5rem;
+        margin-top: 0;
     }
 
     .page-header h1 {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
+    .page-header p {
+        font-size: 0.95rem;
+    }
+
+    /* コンテンツ */
+    .content {
+        padding: 2.5rem 1.2rem;
+    }
+
+    .content h2 {
+        font-size: 1.3rem;
+    }
+
+    .highlight-box {
+        padding: 1.5rem 1.2rem;
+    }
+
+    /* フォーム */
     .contact-form {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.2rem;
+        border-radius: 16px;
+        box-shadow: none;
     }
 }
