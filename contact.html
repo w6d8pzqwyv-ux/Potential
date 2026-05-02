@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>体験申込 | すぽーつくらぶ　ぽてんしゃる</title>
+    <title>お問い合わせ | すぽーつくらぶ　ぽてんしゃる</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,69 +11,66 @@
         <nav>
             <div class="logo">
                 🤸 すぽーつくらぶ　ぽてんしゃる
-                <span class="logo-sub">子どもの「できた！」を育てる</span>
+                <span class="logo-sub">出張体育指導サービス</span>
             </div>
             <button class="nav-toggle" aria-label="メニュー">☰</button>
             <ul class="nav-links">
                 <li><a href="index.html">ホーム</a></li>
-                <li><a href="about.html">教室について</a></li>
-                <li><a href="services.html">クラス案内</a></li>
-                <li><a href="contact.html" class="active">体験申込</a></li>
+                <li><a href="about.html">私たちについて</a></li>
+                <li><a href="services.html">サービス内容</a></li>
+                <li><a href="contact.html" class="active">お問い合わせ</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="page-header">
-            <h1>体験申込・お問い合わせ</h1>
-            <p>お気軽にご連絡ください。2営業日以内にご返信します</p>
+            <h1>お問い合わせ</h1>
+            <p>導入のご相談・無料サンプル授業のご依頼はこちらから</p>
         </section>
 
         <section class="section">
             <form class="contact-form">
                 <div class="form-group">
-                    <label for="parent-name">保護者のお名前 <span class="required">※必須</span></label>
-                    <input type="text" id="parent-name" name="parent-name" placeholder="例：山田 花子" required>
+                    <label for="facility-name">施設名 <span class="required">※必須</span></label>
+                    <input type="text" id="facility-name" name="facility-name" placeholder="例：○○保育園" required>
                 </div>
                 <div class="form-group">
-                    <label for="child-name">お子さまのお名前 <span class="required">※必須</span></label>
-                    <input type="text" id="child-name" name="child-name" placeholder="例：山田 太郎" required>
-                </div>
-                <div class="form-group">
-                    <label for="child-age">お子さまの年齢 <span class="required">※必須</span></label>
-                    <select id="child-age" name="child-age" required>
+                    <label for="facility-type">施設の種別 <span class="required">※必須</span></label>
+                    <select id="facility-type" name="facility-type" required>
                         <option value="">選択してください</option>
-                        <option value="3">3歳</option>
-                        <option value="4">4歳</option>
-                        <option value="5">5歳</option>
-                        <option value="6">6歳</option>
-                        <option value="7">7歳</option>
-                        <option value="8">8歳</option>
-                        <option value="9">9歳</option>
-                        <option value="10">10歳</option>
-                        <option value="11">11歳</option>
-                        <option value="12">12歳</option>
+                        <option value="nursery">保育園・こども園</option>
+                        <option value="dayservice">児童デイサービス（放課後等デイサービス）</option>
+                        <option value="afterschool">学童保育</option>
+                        <option value="other">その他</option>
                     </select>
+                </div>
+                <div class="form-group">
+                    <label for="contact-name">ご担当者名 <span class="required">※必須</span></label>
+                    <input type="text" id="contact-name" name="contact-name" placeholder="例：田中 太郎" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">役職</label>
+                    <input type="text" id="role" name="role" placeholder="例：園長、施設長、主任など">
+                </div>
+                <div class="form-group">
+                    <label for="phone">電話番号 <span class="required">※必須</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="例：000-0000-0000" required>
                 </div>
                 <div class="form-group">
                     <label for="email">メールアドレス <span class="required">※必須</span></label>
                     <input type="email" id="email" name="email" placeholder="例：example@email.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="class-type">希望クラス</label>
-                    <select id="class-type" name="class-type">
-                        <option value="">未定（ご提案を希望）</option>
-                        <option value="infant">幼児体操クラス（3〜5歳）</option>
-                        <option value="elementary">小学生体操クラス（6〜12歳）</option>
-                        <option value="individual">個別指導</option>
-                    </select>
+                    <label for="children-count">対象児童の人数（おおよそ）</label>
+                    <input type="text" id="children-count" name="children-count" placeholder="例：30名">
                 </div>
                 <div class="form-group">
-                    <label for="message">ご質問・ご要望</label>
-                    <textarea id="message" name="message" rows="5" placeholder="体験を希望する日時や、ご不明な点があればお気軽にどうぞ"></textarea>
+                    <label for="message">お問い合わせ内容</label>
+                    <textarea id="message" name="message" rows="5" placeholder="ご質問・ご要望・無料サンプル授業のご希望など、お気軽にご記入ください"></textarea>
                 </div>
                 <button type="submit" class="btn btn-orange" style="width:100%;font-size:1.1rem;padding:1rem;">
-                    🎉 申し込む
+                    📩 送信する
                 </button>
             </form>
         </section>
@@ -82,7 +79,7 @@
     <script src="js/main.js"></script>
     <footer>
         <div class="footer-logo">🤸 すぽーつくらぶ　ぽてんしゃる</div>
-        <p>子どもたちの「できた！」を一緒に育てます</p>
+        <p>出張体育指導サービス</p>
         <p style="margin-top:1rem;">&copy; 2026 すぽーつくらぶ　ぽてんしゃる. All rights reserved.</p>
     </footer>
 </body>
