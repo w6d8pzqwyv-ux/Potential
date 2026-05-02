@@ -779,6 +779,10 @@ footer p {
         font-size: 1.8rem;
     }
 
+    .hero-content h1 br {
+        display: none;
+    }
+
     .hero-content p {
         font-size: 0.95rem;
         margin-bottom: 2rem;
