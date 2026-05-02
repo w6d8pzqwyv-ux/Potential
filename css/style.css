@@ -91,24 +91,20 @@ nav {
     justify-content: center;
     margin-top: 65px;
     overflow: hidden;
+    background: linear-gradient(
+        160deg,
+        var(--orange) 0%,
+        #F7931E 40%,
+        var(--blue) 100%
+    );
 }
 
 .hero-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url('../images/d86d0c54-01ad-4f38-ad24-29675a9ec8e2.jpg');
-    background-size: cover;
-    background-position: center top;
+    display: none;
 }
 
 .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        160deg,
-        rgba(255, 107, 53, 0.82) 0%,
-        rgba(41, 182, 246, 0.75) 100%
-    );
+    display: none;
 }
 
 .hero-content {
@@ -389,39 +385,36 @@ nav {
 
 /* 活動写真ギャラリー */
 .photo-gallery {
-    column-count: 4;
-    column-gap: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .photo-item {
-    break-inside: avoid;
-    margin-bottom: 0.8rem;
+    flex: 0 0 auto;
     background: #fff;
-    border-radius: 12px;
-    padding: 6px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.10);
-    position: relative;
-    overflow: hidden;
+    border-radius: 10px;
+    padding: 5px 5px 2px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
 }
 
 .photo-item img {
-    width: 100%;
-    height: auto;
     display: block;
-    border-radius: 8px;
-    transition: transform 0.35s ease;
-}
-
-.photo-item:hover img {
-    transform: scale(1.03);
+    width: auto;
+    height: auto;
+    max-height: 200px;
+    max-width: 260px;
+    border-radius: 6px;
 }
 
 .photo-label {
     text-align: center;
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     font-weight: 700;
     color: var(--gray);
-    padding: 0.35rem 0.4rem 0.1rem;
+    padding: 0.3rem 0.2rem 0.1rem;
 }
 
 /* 資格・実績 */
@@ -1002,7 +995,12 @@ footer p {
 
     /* 活動写真ギャラリー */
     .photo-gallery {
-        column-count: 2;
+        justify-content: center;
+    }
+
+    .photo-item img {
+        max-height: 150px;
+        max-width: 160px;
     }
 
     /* 資格・実績 */
