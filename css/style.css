@@ -517,6 +517,49 @@ footer p {
     margin-top: 0.5rem;
 }
 
+/* カリキュラムテーブル */
+.curriculum-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    font-size: 0.95rem;
+}
+
+.curriculum-table thead tr {
+    background: var(--orange);
+    color: var(--white);
+}
+
+.curriculum-table th {
+    padding: 1rem 1.2rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+.curriculum-table td {
+    padding: 0.9rem 1.2rem;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+    line-height: 1.7;
+}
+
+.curriculum-table tbody tr:nth-child(even) {
+    background: var(--light-bg);
+}
+
+.curriculum-table tbody tr:hover {
+    background: #fff3ee;
+}
+
+.curriculum-table td:first-child {
+    font-weight: 700;
+    color: var(--orange);
+    white-space: nowrap;
+    min-width: 60px;
+}
+
 /* ハンバーガーボタン（PCでは非表示） */
 .nav-toggle {
     display: none;
