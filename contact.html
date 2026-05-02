@@ -30,49 +30,75 @@
         </section>
 
         <section class="section">
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="facility-name">施設名 <span class="required">※必須</span></label>
-                    <input type="text" id="facility-name" name="facility-name" placeholder="例：○○保育園" required>
+            <div style="max-width:620px;margin:0 auto;">
+
+                <!-- 連絡先カード -->
+                <div class="contact-info-card">
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">📞</span>
+                        <div>
+                            <div class="contact-info-label">お電話でのお問い合わせ</div>
+                            <a href="tel:09068595690" class="contact-info-value">090-6859-5690</a>
+                            <div class="contact-info-note">直接お電話いただくと、より早急な対応が可能です。お気軽にご連絡ください！</div>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">✉️</span>
+                        <div>
+                            <div class="contact-info-label">メールでのお問い合わせ</div>
+                            <a href="mailto:sportsclub-potential@hotmail.com" class="contact-info-value contact-info-email">sportsclub-potential@hotmail.com</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="facility-type">施設の種別 <span class="required">※必須</span></label>
-                    <select id="facility-type" name="facility-type" required>
-                        <option value="">選択してください</option>
-                        <option value="nursery">保育園・こども園</option>
-                        <option value="dayservice">児童デイサービス（放課後等デイサービス）</option>
-                        <option value="afterschool">学童保育</option>
-                        <option value="other">その他</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="contact-name">ご担当者名 <span class="required">※必須</span></label>
-                    <input type="text" id="contact-name" name="contact-name" placeholder="例：田中 太郎" required>
-                </div>
-                <div class="form-group">
-                    <label for="role">役職</label>
-                    <input type="text" id="role" name="role" placeholder="例：園長、施設長、主任など">
-                </div>
-                <div class="form-group">
-                    <label for="phone">電話番号 <span class="required">※必須</span></label>
-                    <input type="tel" id="phone" name="phone" placeholder="例：000-0000-0000" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">メールアドレス <span class="required">※必須</span></label>
-                    <input type="email" id="email" name="email" placeholder="例：example@email.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="children-count">子どもたちの人数（だいたいで大丈夫です）</label>
-                    <input type="text" id="children-count" name="children-count" placeholder="例：30名ほど">
-                </div>
-                <div class="form-group">
-                    <label for="message">ご相談内容・ご質問など</label>
-                    <textarea id="message" name="message" rows="5" placeholder="どんな小さなことでもお気軽にどうぞ！&#10;（無料サンプル授業のご希望もこちらから）"></textarea>
-                </div>
-                <button type="submit" class="btn btn-orange" style="width:100%;font-size:1.1rem;padding:1rem;">
-                    📩 送信する
-                </button>
-            </form>
+
+                <!-- フォーム -->
+                <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/contact-thanks.html">
+                    <input type="hidden" name="form-name" value="contact">
+                    <input type="hidden" name="bot-field" style="display:none;">
+
+                    <div class="form-group">
+                        <label for="facility-name">施設名 <span class="required">※必須</span></label>
+                        <input type="text" id="facility-name" name="facility-name" placeholder="例：○○保育園" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="facility-type">施設の種別 <span class="required">※必須</span></label>
+                        <select id="facility-type" name="facility-type" required>
+                            <option value="">選択してください</option>
+                            <option value="nursery">保育園・こども園</option>
+                            <option value="dayservice">児童デイサービス（放課後等デイサービス）</option>
+                            <option value="afterschool">学童保育</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-name">ご担当者名 <span class="required">※必須</span></label>
+                        <input type="text" id="contact-name" name="contact-name" placeholder="例：田中 太郎" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">役職</label>
+                        <input type="text" id="role" name="role" placeholder="例：園長、施設長、主任など">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">電話番号 <span class="required">※必須</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="例：000-0000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required">※必須</span></label>
+                        <input type="email" id="email" name="email" placeholder="例：example@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="children-count">子どもたちの人数（だいたいで大丈夫です）</label>
+                        <input type="text" id="children-count" name="children-count" placeholder="例：30名ほど">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">ご相談内容・ご質問など</label>
+                        <textarea id="message" name="message" rows="5" placeholder="どんな小さなことでもお気軽にどうぞ！&#10;（無料サンプル授業のご希望もこちらから）"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-orange" style="width:100%;font-size:1.1rem;padding:1rem;">
+                        📩 送信する
+                    </button>
+                </form>
+            </div>
         </section>
     </main>
 
@@ -80,6 +106,8 @@
     <footer>
         <div class="footer-logo">🤸 すぽーつくらぶ　ぽてんしゃる</div>
         <p>出張体育指導サービス</p>
+        <p style="margin-top:0.8rem;">📞 <a href="tel:09068595690" style="color:var(--orange);text-decoration:none;font-weight:700;">090-6859-5690</a></p>
+        <p>✉️ <a href="mailto:sportsclub-potential@hotmail.com" style="color:rgba(255,255,255,0.7);text-decoration:none;">sportsclub-potential@hotmail.com</a></p>
         <p style="margin-top:1rem;">&copy; 2026 すぽーつくらぶ　ぽてんしゃる. All rights reserved.</p>
     </footer>
 </body>
