@@ -52,8 +52,11 @@
                 </div>
 
                 <!-- フォーム -->
-                <form class="contact-form" netlify name="contact" method="POST" action="/contact-thanks.html">
-                    <input type="hidden" name="form-name" value="contact">
+                <form class="contact-form" method="POST" action="https://api.web3forms.com/submit">
+                    <input type="hidden" name="access_key" value="635febac-9a32-4cc8-8b34-d441cba67dce">
+                    <input type="hidden" name="subject" value="【ぽてんしゃる】お問い合わせがありました">
+                    <input type="hidden" name="redirect" value="https://sportsclub-potential.netlify.app/contact-thanks.html">
+                    <input type="checkbox" name="botcheck" style="display:none;">
 
                     <div class="form-group">
                         <label for="facility-name">施設名 <span class="required">※必須</span></label>
