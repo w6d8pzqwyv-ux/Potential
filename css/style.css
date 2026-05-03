@@ -827,9 +827,8 @@ footer p {
     line-height: 1;
 }
 
-/* レスポンシブ */
-@media (max-width: 768px) {
-    /* ナビゲーション */
+/* ナビゲーション（タブレット・スマホ共通） */
+@media (max-width: 1024px) {
     nav {
         padding: 0.8rem 1.2rem;
         flex-wrap: wrap;
@@ -874,6 +873,10 @@ footer p {
         background: var(--orange);
         color: var(--white);
     }
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
 
     /* ヒーロー */
     .hero {
