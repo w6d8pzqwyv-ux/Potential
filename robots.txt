@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://sportsclub-potential.w6d8pzqwyv.workers.dev/sitemap.xml
+Sitemap: https://sportsclub-potential.pages.dev/sitemap.xml
